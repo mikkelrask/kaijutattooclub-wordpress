@@ -1,54 +1,16 @@
 {
-  "name": "Kaiju Tattoo Club",
-  "version": "1.1.18",
-  "description": "Pretty fly for a doom guy",
-  "author": "Mikkel Rask <http://raske.xyz>",
-  "license": "GPL-2.0-or-later",
-  "keywords": [
-    "WordPress",
-    "Theme"
-  ],
-  "homepage": "https://kaijutattooclub.dk",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mikkelrask/kaijutattooclub-wordpress.git"
-  },
-  "bugs": {
-    "url": "https://github.com/mikkelrask/kaijutattooclub-wordpress/issues"
-  },
-  "devDependencies": {
-    "autoprefixer": "^10.4.20",
-    "daisyui": "^4.12.10",
-    "dir-archiver": "^2.1.0",
-    "postcss": "^8.4.49",
-    "postcss-cli": "^11.0.0",
-    "postcss-prepend-plugin": "^1.0.7",
-    "rtlcss": "^4.3.0",
-    "tailwindcss": "^3.4.15"
-  },
-  "rtlcssConfig": {
-    "options": {
-      "autoRename": false,
-      "autoRenameStrict": false,
-      "blacklist": {},
-      "clean": true,
-      "greedy": false,
-      "processUrls": false,
-      "stringMap": []
-    },
-    "plugins": [],
-    "map": false
-  },
+  "name": "KaijuSEOClub",
   "scripts": {
-    "clean": "rm -rf style.css node_modules",
-    "compile:rtl": "rtlcss style.css style-rtl.css",
-    "lint:scss": "wp-scripts lint-style 'sass/**/*.scss'",
-    "build:css": "npx postcss src/style.css -o style.css",
-    "watch:css": "npx postcss src/style.css -o style.css --watch",
-    "bundle": "dir-archiver --src . --dest ./join-the-club.zip --exclude tailwind.config.js bun.lockb join-the-club.zip .DS_Store .eslintrc .eslintignore .stylelintrc.json phpcs.xml.dist .stylelintrc.json tailwindcss.config.js postcss.config.js .eslintrc .git .gitattributes .github .gitignore README.md readme.txt LICENSE composer.json composer.lock node_modules vendor package-lock.json package.json .travis.yml phpcs.xml.dist sass style.css.map yarn.lock shell.nix",
-    "sync": "rsync -avu --exclude node_modules/ --exclude .git/ ./ /data/appdata/delos/kaiju/join-the-club"
+    "docz:dev": "docz dev",
+    "docz:build": "docz build",
+    "docz:serve": "docz build && docz serve"
   },
   "dependencies": {
-    "postcss-prepend": "^0.1.2"
+    "docz": "latest",
+    "react": "16.8.0",
+    "react-dom": "16.8.0"
+  },
+  "devDependencies": {
+    "docz-theme-ztopia": "^0.1.13"
   }
 }
